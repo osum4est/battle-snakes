@@ -5,6 +5,7 @@ using UnityEngine;
 public class Prefabs : MonoBehaviour
 {
     private static Prefabs i;
+
     [SerializeField]
     private GameObject snakePartHead;
     [SerializeField]
