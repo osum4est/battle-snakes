@@ -7,10 +7,13 @@ public class Prefabs : MonoBehaviour
     private static Prefabs i;
 
     [SerializeField]
+    private GameObject snake;
+    [SerializeField]
     private GameObject snakePartHead;
     [SerializeField]
     private GameObject snakePartBody;
 
+    public static GameObject Snake { get { return i.snake; } }
     public static GameObject SnakePartHead { get { return i.snakePartHead; } }
     public static GameObject SnakePartBody { get { return i.snakePartBody; } }
 

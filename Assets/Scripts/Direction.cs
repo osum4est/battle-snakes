@@ -31,4 +31,9 @@ public static class DirectionExtensions
         }
         return Vector2.zero;
     }
+
+    public static Direction GetRandomDirection()
+    {
+        return (Direction)Random.Range(0, 4);
+    }
 }

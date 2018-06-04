@@ -10,8 +10,6 @@ public class Snake : MonoBehaviour {
     private int startLength = 5;
     [SerializeField]
     private int moveSpeed = 100;
-    [SerializeField]
-    private float size = .25f;
 
     private SnakePart head;
     private List<SnakePart> body;
@@ -36,7 +34,7 @@ public class Snake : MonoBehaviour {
 
         body = new List<SnakePart>();
         for (int i = 0; i < startLength; i++) {
-            GameObject bodyGameObject = Instantiate(Prefabs.SnakePartBody, new Vector3(-size * (i + 1), 0, 0), Quaternion.identity, transform);
+            GameObject bodyGameObject = Instantiate(Prefabs.SnakePartBody, new Vector3(-Constants.GridSize * (i + 1), 0, 0), Quaternion.identity, transform);
             body.Add(bodyGameObject.GetComponent<SnakePart>());
         }
     }
@@ -68,6 +66,6 @@ public class Snake : MonoBehaviour {
         for (int i = body.Count - 1; i > 0; i--)
             body[i].transform.SetPositionAndRotation(body[i - 1].transform.position, body[i - 1].transform.rotation);
         body[0].transform.SetPositionAndRotation(head.transform.position, head.transform.rotation);
-        head.transform.Translate(size * direction.GetVector().x, size * direction.GetVector().y, 0);
+        head.transform.Translate(Constants.GridSize * direction.GetVector().x, Constants.GridSize * direction.GetVector().y, 0);
     }
 }

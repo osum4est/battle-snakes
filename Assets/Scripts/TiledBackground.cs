@@ -35,7 +35,5 @@ public class TiledBackground : MonoBehaviour
                 newTile.transform.parent = transform;
             }
         }
-
-        tileObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 }

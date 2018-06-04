@@ -53,4 +53,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLength: 5
   moveSpeed: 100
-  size: 0.25
